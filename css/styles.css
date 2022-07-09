@@ -1,3 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
 .grid-container { /* setting up grid, naming grid areas */
     display: grid;
     grid-template-columns: 100%;
@@ -9,12 +20,131 @@
     ;
 }
 
-.header { /* asigning area */
-    grid-area: header;
+h1 {
+    font-size: 12px;
+    font-weight: 12;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+  
+h1 {
+    font-size: 1.125em;
+}
+  
+h2, h3 {
+    line-height: 1.6rem;
+}
+  
+  h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+  
+  h3 {
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+}
+  
+  p {
+    font-size: 1em;
+}
+
+  .trademark {
+    font-weight: 150; 
+}
+ 
+ .header h1,
+ .header h3 {
+   text-transform: none;
+}
+ 
+ .header h1 {
+   font-size: 1.125em;
+   font-weight: 400;
+}
+ 
+ .header h3 {
+   font-size: .75em;
+}
+
+header { /* asigning area */
+    background-color: #8080ff;
+  color: white;
+  grid-area: header;
+  padding: 0 10px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+    display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.navigation {
+    
+    padding-top: 10px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #8585ad;
+    
+}
+
+.header-icons {
+    fill: white;
+  height: 30px;
+  width: 35px;
+}
+
+.header-notifications {
+    margin-right: 15px;
+    position: relative;
+}
+  
+  .bell-icon {
+    height: 25px;
+    width: 25px;
+    fill: white;
+}
+
+/* Makes the green dot */
+.dot {
+    position: absolute;
+    top: -0px;
+    right: 0px;
+    transform: translateY(-8px);
+    padding: 3px;
+    background-color: #90ee90;
+    border-radius: 50%;
+}
+
+.images {
+    border-radius: 50%;
+    max-width: 15vw;
+    max-height: 15vh;
 }
 
 .navigation {
     grid-area: navigation;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #8585ad;
 }
 
 .main {
@@ -26,6 +156,32 @@
 .widget-container-half {
     width: 95vw;
 }
+
+/*
+KEYFRAMES
+*/
+
+/*Keyframes for Notifications Icon*/
+@keyframes bell {
+    20% {
+      transform: rotate(35deg);
+    }
+    40% {
+      transform: rotate(-35deg);
+    }
+    60% {
+      transform: rotate(20deg);
+    }
+    80% {
+      transform: rotate(-20deg);
+    }
+}
+
+.bell-icon:hover {
+    animation: bell 1.25s ease-in-out;
+  }
+  
+
 @media(min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
