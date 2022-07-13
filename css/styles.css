@@ -419,7 +419,7 @@ main {
 
 
 
-    @media (min-width: 768px) {
+   
 
 
 
@@ -436,22 +436,20 @@ main {
                 "header header"
                 "navigation main";
         }
-    }
+    
 
 
 
 
 
-    @media (min-width:768px) {
+    
 
 
 
         .social {
             grid-column: 1 / span 2;
         }
-    }
-
-    @media (min-width: 768px) {
+    
 
         .activity,
         .daily,
@@ -462,9 +460,9 @@ main {
 
             grid-column: 1 / span 1;
         }
-    }
+    
 
-    @media (min-width: 768px) {
+
 
 
 
@@ -477,6 +475,7 @@ main {
 
             width: 95vw;
         }
+}
 
         @media (min-width: 1024px) {
 
@@ -507,6 +506,5 @@ main {
                     "header header"
                     "navigation main";
             }
-        }
-    }
 }
+    
