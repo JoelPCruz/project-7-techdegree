@@ -23,6 +23,9 @@ img {
 .bell-icon {
     display: flex;
     position: relative;
+    max-width: 50px;
+    max-height: 50px;
+    
 
 }
 
@@ -80,7 +83,7 @@ nav {
     flex-direction: column;
 
     grid-area: navigation;
-    background-color: red;
+    background-color: rgb(66, 43, 145);
 
 }
 
@@ -213,27 +216,45 @@ input:checked+.slider:before {
     justify-content: space-between
 }
 
-.vertical-line {
-    border-left: 6px solid green;
-    height: 100px;
+#header-img {
+    max-width: 12vw;
+    max-height: 12vh;
+    margin-right: -22px;
+    margin-left: 12px;
+}
+
+
+
+#border-header {
+    border-left: 1px solid white;
+    margin: 12px 12px;
+    padding-right: 0;
+    
 }
 
 .bell-icon {
     display: flex;
+    position: relative;
     justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-right: -12px;
+    
 
 }
 
 .Webapp {
     color: white;
-
+    font-size: 25px;
 }
 
 .student-name-white {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     color: white;
+    margin-right: 12px;
 }
 
 canvas {
@@ -256,7 +277,7 @@ canvas {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: blue;
+    background-color: rgb(111, 75, 230);
     grid-area: header;
 
 }
@@ -265,12 +286,28 @@ header {
 
 
 main {
-    background-color: lightblue;
+    background-color: rgb(225, 229, 230);
 
 }
 
-main>* {
-    border: 1px solid red;
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+   
+}
+
+
+
+.headline-2 {
+    max-width: 50px;
+    max-height: 50px;
+    border-bottom: solid 1px orange;
+    border-left: solid 1px orange;
+    margin: 25px 25px;
+    
 }
 
 .activity {
@@ -332,6 +369,8 @@ main>* {
 .nav {
     display: flex;
     justify-content: space-between;
+    padding: 6px 12px;
+    background-color: ;
 }
 
 
